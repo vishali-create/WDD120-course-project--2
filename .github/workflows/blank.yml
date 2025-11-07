@@ -1,0 +1,27 @@
+name: CI/CD Demo
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up environment
+        run: echo "Installing Ubuntu dependencies..."
+
+      - name: Run installations
+        run: echo "Installing project dependencies..."
+
+      - name: Run test cases
+        run: echo "Running demo test cases..."
+
+      - name: Deploy script
+        run: echo "Deploying application..."
